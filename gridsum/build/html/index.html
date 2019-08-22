@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zn_CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>大数据平台团队新员工指引 &#8212; 大数据平台团队新员工指引 0.1 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/language_data.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="id1">
+<h1>大数据平台团队新员工指引<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+<div class="section" id="id2">
+<h2>大数据平台团队新员工指引<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>There should only be one of these per page and this will also -- when
+converting to pdf -- be used for the chapters.</p>
+</div>
+</div>
+<div class="section" id="id3">
+<h1>公司新员工指引<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h1>
+<p>新员工指引</p>
+</div>
+<div class="section" id="id4">
+<h1>开发规范<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h1>
+<p>java规范
+日志规范</p>
+</div>
+<div class="section" id="id5">
+<h1>开发流程<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h1>
+<p>1.Gitlab里面创建对应的issue，并打好标签和milestone
+2.在uniplan中针对该任务进行对应的创建、排期处理
+3.功能开发完毕并通过自测后，gitlab中的issue进行关闭，如果有相关总结性结论，整理到wiki中，添加对应状态url后，关闭gitlab issue
+4.开发自测后，提交issue等待验收，通过QA测试后，才验收通过
+5.相关Bug提交到Jira中，Bug修改不在uniplan排期之中</p>
+</div>
+<div class="section" id="id6">
+<h1>提测规范<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h1>
+<p>自2018年10月8日起，大家在发起提测报告后，出现了以下问题，严重影响了相关QA同学的测试:</p>
+<p>1.开发自己都没有针对自己开发的功能用过一遍就发起提测
+2.代码中存在及其明显的P1、P2的BUG，稍微使用就能发现的
+3.代码没有打包或者环境根本没有任何准备就发起提测
+4.QA测试过程中，随意更新提测环境，导致QA测试终端
+5.为了向上汇报或者更新UniPlan的工作项，将开发代码提交作为通过验收的标准
+以上行为是对开发人员自己的不负责任，对QA同学的不负责任；将原本
+开发应该做到的开发自测排除在整个开发周期的过程，变为了QA发现并提交的Bug</p>
+<p>1.UniPlan内，开发认为主线Bug已经修复后，可以提交验收请求；相关验收人在通过开发自测后，才允许通过验收。
+2.提测功能开发人员自己使用过，确定没有特别明显的P1、P2的Bug后方可以发起提测
+3.发起提测报告后，项目负责人对测试环境负责；
+4.非P1、P2类Bug不得在本次QA测试过程中发起提测；
+5.如果要重新部署，那么本次提测算不通过，QA予以驳回；
+6.任何由开发私自处理测试环境导致QA不可测试的情况，统一按照P1的低级Bug提交Jira
+7.自提测报告提交起，测试环境必须可用；任何提测报告发起后，测试环境在提测完成前不可用的均按照P0处理
+8.QA有权打回任何不符合以上流程的提测报告
+项目负责人对提测报告负责，也要约束相关研发人员提测后随意变更测试环境，并做好监督</p>
+<blockquote>
+<div><p>P1（Priority=1）属于阻碍性Bug，需要第一时间处理。因此Bug被提交后2小时（当日）之内需要被“解决”。
+P2优先级的在8小时之内被“处理”。
+P3优先级的在24小时之内被“处理”。
+P4优先级的可以根据项目情况，经过技术经理权衡后判断是否修复。</p>
+</div></blockquote>
+<p>尽量分布式提测，最大以功能模块提交；分阶段提测后，再整体提交功能。
+季度、年度绩效都会参考具体规范的执行情况和QA同学的反馈
+咱们没有必要自欺欺人，需要延期的任务及时与我沟通即可，没有必要为了让我认为你没有延期而提前点击已完成按钮
+不要因为我发了这个邮件就不敢提测了，邮件目的是为了为开发同学自己负责，并减少不属于QA同学的工作量。</p>
+</div>
+<div class="section" id="id7">
+<h1>提交代码<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h1>
+<p>提交代码的大概流程</p>
+</div>
+<div class="section" id="id8">
+<h1>设计规范<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h1>
+<p>API设计规范</p>
+</div>
+<div class="section" id="id9">
+<h1>系统版本规范<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h1>
+<p>主要参考：<a class="reference external" href="https://semver.org/">https://semver.org/</a></p>
+<p>1.采用的版本号为: MAJOR.MINOR.PATCH（主版本号.次版本号.修订号）
+2.主版本号只有在发生不兼容、系统架构等变更时修改
+3.次版本号针对排期内的主要功能、同一主版本向下兼容的功能性新增
+4.修订号，做了向下兼容的问题修复时
+5.打包时，例如单测环境，要求打包为：主版本号.次版本号.修订号-BetaN，N表示针对主版本号.次版本号.修订号的第几轮测试
+6.准备上线TestPass时，要求打包版本为:主版本号.次版本号.修订号-RCN,N表示第几轮TestPass
+7.正式发布: 主版本号.次版本号.修订号
+8.每次测试修复的BUG，都放在beta(rc)N+1的版本进行修复</p>
+</div>
+<div class="section" id="id10">
+<h1>开发工具<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h1>
+<p>IntelliJ IDEA，download
+Code style(与新版idea不兼容，暂时不安装)以及File templates配置
+ssh客户端（不要使用破解版）</p>
+<blockquote>
+<div><p>windows 推荐MobaXterm, 其他免费的10个ssh clients
+mac 推荐zsh</p>
+</div></blockquote>
+</div>
+<div class="section" id="java">
+<h1>java版本<a class="headerlink" href="#java" title="Permalink to this headline">¶</a></h1>
+<p>Oracle JDK1.8_202(这是最后的免费Oracle JDK)</p>
+<p>Open JDK</p>
+</div>
+<div class="section" id="maven">
+<h1>maven<a class="headerlink" href="#maven" title="Permalink to this headline">¶</a></h1>
+<p>maven使用手册</p>
+</div>
+<div class="section" id="gradle">
+<h1>gradle<a class="headerlink" href="#gradle" title="Permalink to this headline">¶</a></h1>
+<p>将init.gradle文件放入当前用户的.gradle目录下
+init.gradle</p>
+</div>
+<div class="section" id="id11">
+<h1>周报<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h1>
+<p>周报目前要写在两个位置</p>
+<p>gitlab 周报
+周报系统iwork
+因为其他团队需要对周报进行处理，依赖各位的周报：
+1.gitlab周报，需要在每周六中午12点之前完成
+2.iwork的周报，需要在每周日中午12点之前完成
+尽量详细描述本周工作，避免流水帐</p>
+</div>
+<div class="section" id="uniplan">
+<h1>uniplan<a class="headerlink" href="#uniplan" title="Permalink to this headline">¶</a></h1>
+<p>地址
+Type: Exact Redirect
+From URL: <a class="reference external" href="file:///D:/sphinx-3.1.1/gridsum/build/html/index.html">file:///D:/sphinx-3.1.1/gridsum/build/html/index.html</a>
+To URL:   <a class="reference external" href="https://sso-cas.gridsumdissector.com/login?service=http%3A%2F%2Funiplan.gridsum.com%2Fapi%2Fv1%2Flogin%2F">https://sso-cas.gridsumdissector.com/login?service=http%3A%2F%2Funiplan.gridsum.com%2Fapi%2Fv1%2Flogin%2F</a>
+右键空白处，新增任务或者新增子任务</p>
+<p>任务计划超过一天的都要写进unipan
+如果出现特殊情况，计划延期了，需要修改或者删除计划，请向验收人说明情况
+任务完成后，点击验收的对号图标，同时把issue或者wiki的地址贴上去</p>
+</div>
+<div class="section" id="id12">
+<h1>部门传统<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h1>
+<p>使用google搜索引擎
+文档中一个错别字，在大数据平台微信群中，发一块钱微信红包。重要文档一个错别字，视重要程度5-10块不等</p>
+</div>
+<div class="section" id="id13">
+<h1>推荐书籍<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h1>
+<p>代码整洁之道
+重构
+人月神话</p>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">大数据平台团队新员工指引</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, 敖子尧.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.2.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
